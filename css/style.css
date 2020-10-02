@@ -1,0 +1,244 @@
+/* Base Styles -------------------- */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  position: relative;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -.2px;
+  word-spacing: 3px;
+  margin: 0 auto;
+  min-height: 100%;
+  background-color: #f7f7f7;
+}
+
+h1, h4 {
+  font-weight: 700;
+}
+
+a {
+  color: #000;
+  text-decoration: none; 
+}
+
+ul {
+  list-style-type: none;
+}
+p {
+  line-height: 1.5em;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:hover, .footer a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: #778492;
+}
+
+.up-hover:hover {
+  top : -5px;
+  box-shadow: 15px 15px 15px #777;
+}
+
+/* Navigation Styles --------------------- */
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  z-index: 100;
+}
+
+#stickyNavbar li {
+  display: inline-block;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+/* Common Styles --------------------- */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container.container-header {
+  display: flex;
+  z-index: 1;
+  position: relative;
+  height: 100%
+  min-height: 50%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+.section_heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 45px; 
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.about-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+#grid1, #grid2 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ebebeb;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 1px -0.5px hsla(0,0%,100%,.7), 3px 3px 7px -3px rgba(0,0,0,.1);
+}
+
+.cell {
+  display: flex;
+  width: 100%;
+  padding: 48px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.btn {
+  border:hidden;
+  color: #000;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Header Styles --------------------- */
+
+.heading{ 
+  padding:100px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* Experience Styles --------------------- */
+
+.experience-list li, .projects-list li {
+  list-style-type: circle;
+  text-align: left;
+}
+
+/* Projects Styles --------------------- */
+
+.thumbnail{
+  max-width : 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+.shadow{
+  box-shadow: 7px 7px 7px grey;
+  position: relative;
+  transition: all 0.5s;
+  top: 0px;
+}
+
+.cust-caption{
+  display: none;
+  position: absolute;
+  background-color: grey;
+  padding: 10px;
+  color: #fff;
+  margin: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  overflow-y: auto;
+}
+
+.cust-caption a{
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+a.btn-cta-primary  {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+a.btn-cta-secondary  {
+  background: #778492;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 20%;
+}
+
+/* Footer Styles --------------------- */
+
+.footer {
+  font-size: 1.2em;
+}
+
+.footer a {
+  color: #778492;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Media Query Styles --------------------- */
+
+@media (max-width: 767px) {
+  .container.container-nav {
+    height: 24px;
+    }
+  #stickyNavbar {
+    display: none;
+  }
+  .footer {
+  	font-size: 0.9em;
+  }
+}
